@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyMercari</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <a href="/top">My Mercari</a>
+      </div>
+      <div class="header-menu">
+        <ul>
+          <li><a href="/signup">新規登録</a></li>
+          <li><a href="/signup">新規登録</a></li>
+        </ul>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>
