@@ -7,20 +7,27 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
 
   <body>
     <header>
-      <div class="header-logo">
-        <a href="/top">My Mercari</a>
-      </div>
-      <div class="header-menu">
-        <ul>
-          <li><a href="/signup">新規登録</a></li>
-          <li><a href="/signup">新規登録</a></li>
-        </ul>
+      <div class="header-container">
+        <div class="header-logo">
+          <a href="/top">
+            My Mercari
+          </a>
+        </div>
+        <div class="header-menu">
+          <ul>
+            <li><a href="/signup" class="signup">新規登録</a></li>
+            <li><a href="/signin" class="signin">ログイン</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <%= yield %>
+    <footer>
+    </footer>
   </body>
 </html>
