@@ -1,3 +1,7 @@
+.main-signup {
+    background-color: white;
+}
+
 .signup-top {
     margin-top: 20px;
     text-align: center;
@@ -6,8 +10,9 @@
 }
 
 .userinfo-container {
-    width: 40%;
-    margin: 0 auto 20px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .userinfo-inputform p {
@@ -35,6 +40,7 @@
 
 .password-container {
     margin-top: 20px;
+    padding-bottom: 20px
 }
 
 .input-form {
