@@ -3,20 +3,25 @@
         <div class="signup-top">
             <h2>新規登録</h2>
         </div>
-        <div class="userinfo-container">
-            <div class="nickname-container">
-                <p>ニックネーム<span class="necessary-logo">必須</span></p>
-                <input class="input-form">
+        <%= form_with url: signup_path do |user| %>
+            <div class="userinfo-container">
+                <%= form_with url: "/signup", local: true do |f|%>    
+                    <div class="nickname-container">
+                        <p>ニックネーム<span class="necessary-logo">必須</span></p>
+                        <%= f.text_field :nickname, class: "input-form" %>
+                    </div>
+                    <div class="mailaddress-container">
+                        <p>メールアドレス<span class="necessary-logo">必須</span></p>
+                        <%= f.text_field :mailaddress, class: "input-form" %>
+                    </div>
+                    <div class="password-container">
+                        <p>パスワード（8文字以上の英数字）<span class="necessary-logo">必須</span></p>
+                        <%= f.password_field :password, class: "input-form" %>
+                    </div>
+                    <%= f.submit "アカウント作成", class: "btn submit-btn" %>
+                <% end %>
             </div>
-            <div class="mailaddress-container">
-                <p>メールアドレス<span class="necessary-logo">必須</span></p>
-                <input class="input-form">
-            </div>
-            <div class="password-container">
-                <p>パスワード（8文字以上の英数字）<span class="necessary-logo">必須</span></p>
-                <input type ="password" class="input-form">
-            </div>
-        </div>
+        <% end %>
     </div>
 </div>
 
